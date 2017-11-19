@@ -1,0 +1,271 @@
+<?php require_once 'header.php'; ?>
+<?php 
+	if($_SESSION['user']->capabilities != 'null'){
+		$user_capabilities = $_SESSION['user']->capabilities;
+		$user_capabilities = (!empty($user_capabilities))? json_decode($user_capabilities) : array();
+	
+	
+	}else{$user_capabilities = array('empty'); }
+
+	if(in_array('add_sowtime', $user_capabilities)){	
+		
+	
+?>
+
+	<div class="container">
+	<div class="row">
+		<div class="col-md-8">
+			<ol class="breadcrumb">
+		  <li><a href="index.php">Home</a></li>
+		  <li><a href="view_private_showtime.php">Show times</a></li>
+		  <li class="active"><?php echo (isset($_GET['id']))? 'Update' : 'Add' ?> Show times</li>
+		</ol>
+		</div>
+
+		<div class="col-md-4 form-horizontal" style="position:relative;">
+		<div class="alert alert-danger" id="invalid_time" style="display:none;position:absolute;" role="alert">Invalid Time!</div>
+			<label for="itemname" class="col-sm-3 control-label" style=" padding-top: 15px;">Go Date: </label>
+				<div class="col-sm-7">
+					<div class="input-group date" style="margin-top: 10px; margin-bottom: 10px;">
+				        <input type="date" id="animateDate" class="form-control">
+				        <span class="input-group-addon" id="go" onclick="go()">
+				            <span class="glyphicon glyphicon-calendar"></span>
+				        </span>
+				    </div>
+				</div>
+		</div>
+
+	</div><!--row-->
+
+<div class="row">
+		<div class="col-md-12 col-sm-12 timeline">
+			<div id="mytimeline"></div>
+		</div>
+	</div><!-- row -->
+<form class="form-horizontal dashboardForm"  action="" method="post" enctype="multipart/form-data">
+		<div class="row gray-header">
+				<div class="col-md-12">
+					<div class="form-header-inner">
+						<div class="col-sm-6">
+							<h3>Showtime Details</h3>
+						</div>
+				 		<div class="col-sm-6 action_btn">
+				 			<button type="button" class="btn submitBtn cancel-button" name="">Cancel</button>
+					 		<button type="submit" class="btn submitBtn save-button" name="add_showtime"><?php echo (isset($_GET['id']))? 'Save Changes ' : 'Add Show time' ?>  </button>
+					 		
+				 		</div>
+				 	</div>
+			 	</div>
+		  </div><!--row-->
+		
+			<?php 
+
+			$movie = new movie();
+			$all_movie = $movie->get_movies();
+
+			$voucher = new voucher();
+			$all_voucher = $voucher->get_vouchers();
+
+			$screen = new screen();
+			$all_screen = $screen->get_screens();
+
+			$setting = new setting();
+			$timing_result = $setting->get_timings();
+			$timings_val = $timing_result[0]->setting_value;
+			$timings_val = (!empty($timings_val))? json_decode($timings_val) : array();
+	
+			$showtime = new showtime();
+			
+			$ID = (isset($_GET['id']))? $_GET['id'] : NULL;
+			if (isset($_POST['add_showtime'])) {		
+				// Update old record
+				if (isset($ID)) {
+					$results = $showtime->update_showtime($_POST, $ID);
+				}else{ // Insert new
+					$results = $showtime->insert_private_showtime($_POST);
+				}
+				if ($results) {
+					echo '<div class="alert alert-success" role="alert"> Added showtime Sucessfully </div>';
+				}else{
+					echo '<div class="alert alert-danger" role="alert"> Error </div>';
+				}
+			}
+			if (isset($ID)) {
+				$showtime_result = $showtime->get_private_showtimes($ID);
+
+			}
+			?>
+	<div class="form-container">
+				
+	<div class="col-md-6">
+				<div class="col-md-12">	
+					<div class="form-group">
+						<label for="showtime_movie_id" class="col-sm-4 control-label"><span>* </span> Show Movie: </label>
+						<div class="col-sm-8">
+							<select class="form-control" name="showtime_movie_id" id="showtime_movie_id" required>
+								<option value="" selected disabled >Select below</option>
+								<?php 
+								foreach ($all_movie as $value){ ?>
+
+									<option value="<?php echo $value->movie_id; ?>" <?php (isset($ID))? $movie_name = $showtime_result->showtime_movie_id : ''; if(isset($ID)){if($value->movie_id == $movie_name){echo 'selected=selected';}}?>><?php echo $value->movie_title; ?></option>
+								<?php } ?>
+							</select>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="clear"></div>
+				<div class="col-md-12">	
+					<div class="form-group">
+						<label for="showtime_screen_id" class="col-sm-4 control-label"><span>* </span> Show Screen: </label>
+						<div class="col-sm-8">
+							<select class="form-control" name="showtime_screen_id" id="showtime_screen_id" required>
+								<option value="" selected disabled >Select below</option>
+								<?php 
+								foreach ($all_screen as $screen_value){ ?>
+									<option value="<?php echo $screen_value->screen_id; ?>" <?php (isset($ID))? $screen_name = $showtime_result->showtime_screen_id : ''; if(isset($ID)){if($screen_value->screen_id == $screen_name){echo 'selected=selected';}}?>><?php echo $screen_value->screen_name; ?></option>
+								<?php } ?>
+							</select>
+						</div>
+					</div>
+				</div>
+				
+				<div class="clear"></div>
+
+				<div class="col-md-12">	
+					<div class="form-group">
+						<label for="showtime_ticket_type" class="col-sm-4 control-label"><span>* </span> Voucher type: </label>
+						<div class="col-sm-8">
+							<select class="form-control" name="showtime_voucher_type" required>
+								<option value="" selected disabled >Select below</option>
+								<?php 
+								foreach ($all_voucher as $value){ ?>
+									<option value="<?php echo $value->voucher_id; ?>" <?php (isset($ID))? $voucher_name = $showtime_result->showtime_voucher_type : ''; if(isset($ID)){if($value->voucher_id == $voucher_name){echo 'selected=selected';}}?>><?php echo $value->voucher_title; ?></option>
+								<?php } ?>
+							</select>
+						</div>
+					</div>
+				</div>
+
+				<div class="clear"></div>
+
+				
+
+				<div class="col-md-12">	
+					<div class="form-group">
+						<label for="showtime_datetime" class="col-sm-4 control-label"><span>* </span>Show Date & Timings: </label>
+						<div class="col-sm-8">
+							<input type="text" name="showtime_datetime[]" id="showtime_datetime" value="<?php echo (isset($ID))? $showtime_result->showtime_datetime : '' ?>" class="form-control checktime datetimepicker" placeholder="Insert date time" required>
+							<div id="time_confilict" class="alert alert-danger" role="alert" style="display:none;"> </div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="clear"></div>
+
+				
+			</div><!-- col-md-6 -->
+
+			<div class="col-md-6">
+
+			<div class="col-md-11 col-md-offset-1">	
+					<div class="form-group">
+						<label for="showtime_status" class="col-sm-4 control-label"><span>* </span>Status: </label>
+						<div class="col-sm-4">
+							<select class="form-control status" name="showtime_status" required>
+								<?php foreach($showtime_status as $showtime_status_key => $showtime_status_value){ ?>
+									<option value="<?php echo $showtime_status_key; ?>" <?php (isset($ID))? $selected_showtime_status = $showtime_result->showtime_status : '';if(isset($ID)){if($showtime_status_key == $selected_showtime_status){echo 'selected=selected';}}?> ><?php echo $showtime_status_value; ?></option>
+									<?php } ?>
+							</select>
+						</div>
+					</div>
+				</div>
+				
+				<div class="clear"></div>
+
+				
+
+				<div class="col-md-11 col-md-offset-1">	
+					<div class="form-group">
+						<label for="showtime_complimentry_seats" class="col-sm-4 control-label"><span>* </span>Allow complimentry: </label>
+						<div class="col-sm-8">
+							<select class="form-control" name="showtime_complimentry_seats" required>
+								<option value="" selected disabled>Select below</option>
+								<?php foreach($normal_option as $normal_option_key => $normal_option_value){ ?>
+									<option value="<?php echo $normal_option_key; ?>" <?php (isset($ID))? $selected_comlimentry_status = $showtime_result->showtime_complimentry_seats : '';if(isset($ID)){if($selected_comlimentry_status == $normal_option_key){echo 'selected=selected';}}?> ><?php echo $normal_option_value; ?></option>
+									<?php } ?>
+							</select>
+						</div>
+					</div>
+				</div>
+
+				<div class="clear"></div>
+
+				<div class="col-md-11 col-md-offset-1">	
+					<div class="form-group">
+						<label for="showtime_color" class="col-sm-4 control-label">Timeline color: </label>
+						<div class="col-sm-8">
+							<select class="form-control" name="showtime_color">
+								<option value="" selected disabled>Select below</option>
+								<?php foreach($showtime_color as $showtime_color_key => $showtime_color_value){ ?>
+									<option value="<?php echo $showtime_color_key; ?>" <?php (isset($ID))? $selected_showtime_color = $showtime_result->showtime_color : '';if(isset($ID)){if($showtime_color_key == $selected_showtime_color){echo 'selected=selected';}}?> ><?php echo $showtime_color_value; ?></option>
+									<?php } ?>
+							</select>
+						</div>
+					</div>
+				</div>
+				
+				<div class="clear"></div>
+
+				<input type="hidden" name="showtime_trailer_duration" id="showtime_trailer_duration" value="<?php echo (isset($ID))? $showtime_result->showtime_trailer_duration : $timings_val[0] ?>" class="form-control "  >
+			
+				<input type="hidden" name="showtime_interval" id="showtime_interval" value="<?php echo (isset($ID))? $showtime_result->showtime_interval : $timings_val[1] ?>" class="form-control "  >
+			
+				<input type="hidden" name="showtime_cleanup" id="showtime_cleanup" value="<?php echo (isset($ID))? $showtime_result->showtime_cleanup : $timings_val[2] ?>" class="form-control "  >
+			
+
+				<div class="col-md-11 col-md-offset-1">	
+					<div class="form-group">
+						<div class="col-sm-8">
+							<input type="hidden" name="showtime_key" id="showtime_key" value="<?php echo (isset($ID))? $showtime_result->showtime_key : 'private' ?>" class="form-control"  >
+							<input type="hidden" name="showtime_ticket_type" id="showtime_ticket_type" value="" class="form-control"  >
+						</div>
+					</div>
+				</div>
+
+				<?php if (isset($ID)){ ?>
+				<div class="col-md-11 col-md-offset-1">	
+					<div class="form-group">
+						<div class="col-sm-8">
+							<a class="btn submitBtn save-button" target="_blank" href="print_vouchers.php?v_show_id=<?php echo $_GET['id'] ?>&v_sc_id=<?php if(isset($ID)){ echo $showtime_result->showtime_screen_id;}?>&v_type=<?php if(isset($ID)){echo $showtime_result->showtime_voucher_type;}?>&v_m=<?php if(isset($ID)){echo $showtime_result->showtime_movie_id;}?>&v_d=<?php if(isset($ID)){echo $showtime_result->movie_distributer_id;}?>">Print Vouchers</a>
+						</div>
+					</div>
+				</div>
+				<?php } ?>
+				
+				<div class="clear"></div>
+
+			</div><!-- col-md-6 -->
+		 </div><!-- form-container -->
+	  </form>
+<div class="delete_confirm_modal modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+		  <div class="modal-dialog modal-sm">
+		    <div class="modal-content">
+		      Confirm Delete?
+		    </div>
+		    <div class="modal-footer">
+		        <button type="button" class="btn btn-default btn_yes" data-dismiss="modal">Yes</button>
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+		    </div>
+		  </div>
+		</div><!-- Modal -->	
+<?php require_once 'include/short_scripts/private_showtime_script.php'; ?>
+<?php }else{
+	echo '<div class="col-md-10 col-md-offset-1 paddingTop marginTop" style="text-align: center;padding-top: 20px;"><img src="assets/images/access.jpg" style="margin:auto;display:block;"/>';
+	echo '<button class="btn submitBtn cancel-button btn-primary" onclick="goBack()" style="clear:both;margin-top:10px;">Go Back!</button></div>';
+	echo '<script>function goBack() { window.history.back();}</script>';
+
+	}
+?>
+<?php require_once 'footer.php'; ?>

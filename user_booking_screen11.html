@@ -1,0 +1,1454 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <title>Cinema</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+	<link href="assets/css/dashboard.css" rel="stylesheet">
+
+
+  </head>
+
+  <body>
+  <!--header-->
+   <div class="container top-bar">
+	 <div class="row">
+		<div class="col-md-6 col-sm-6">
+			<a href="#"><img alt="logo" src="assets/images/logo.png"></a>
+		</div><!-- col-md-6 -->
+		
+		<div class="col-md-6 col-sm-6 right-top-bar">
+			<ul class="navbar-right settings">
+				<li><a href="#"><p class="user-name">Muhammad Raheel Ghani<br><span>Creative head</span></p></a></li>
+				<li><a href="#"><img class="user-img " src="assets/images/admin_img.png"/></a></li>
+				<li class="dropdown">
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img class="setting-icon" src="assets/images/settings.png"/></a>
+				  <ul class="dropdown-menu">
+					<li><a href="#">Action</a></li>
+					<li><a href="#">Another action</a></li>
+					<li><a href="#">Another action</a></li>
+					<li><a href="#">Another action</a></li>
+				  </ul><!-- dropdown -->
+				</li>
+			</ul><!-- navbar-right -->
+		</div><!-- col-md-6 -->
+	 </div><!-- row -->
+    </div><!-- container top-bar-->
+	
+  <div class="container">
+	<div class="row">
+		<div class="col-sm-12 header-seat">
+			<div class="row">
+				<div class="col-sm-9 plan-buttons">
+					<button class="btn btn-default empty" type="button">
+						<span class="badge">43 </span> Seat Empty 
+					</button>
+
+					<button class="btn btn-default booked" type="button">
+						<span class="badge">43 </span> Seat have been Selected 
+					</button>
+
+					<button class="btn btn-default selecting" type="button">
+						<span class="badge">43 </span> Seat Selecting 
+					</button>
+				</div>
+				<div class="col-sm-3">
+					<div class="search-seats input-group">
+						<input type="text" class="form-control search-control" placeholder="Search for...">
+							<span class="input-group-btn">
+							<button class="btn btn-default search-btn" type="button"><img  src="assets/images/search-icon.png"/></button>
+						</span>
+					</div><!-- /input-group -->
+				</div>
+			</div>
+		</div><!-- col-sm-12 -->
+   </div><!-- row -->
+  </div><!-- container -->
+	 
+   <!--/header-->
+   
+  <div class="container seats-container">
+  
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selected_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/empty_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/empty_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/empty_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/empty_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/empty_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/empty_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/empty_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/empty_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/empty_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/empty_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+	
+	
+
+	
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		
+
+		
+		<div class="row-11">
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selected_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/empty_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selected_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/empty_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selected_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/empty_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selected_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/empty_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selected_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/empty_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selected_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+	</div><!--row-11-->
+
+	<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selected_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/empty_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selected_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/empty_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selected_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/empty_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selected_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/empty_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="row-11">
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+		</div><!-- crow-11 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selected_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selected_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selected_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selected_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selected_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selected_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selected_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selected_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selected_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selected_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selected_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selected_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="row-11">
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/empty_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/empty_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/empty_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/empty_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/empty_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/empty_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/empty_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/empty_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/empty_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/empty_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/empty_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		</div><!-- row-11 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selecting_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+		</div><!-- col-sm-12 -->
+
+		<div class="row-11">
+			<div class="col-sm-1 seats nopadding">
+				<img src="assets/images/selected_seats.png">
+				<div class="checkbox">
+					<label><input type="checkbox"  name="capabilities[]" value="" >
+							(A-1)
+					 </label>
+				 </div>
+			</div><!-- col-sm-12 -->
+
+			<div class="col-sm-1 seats nopadding">
+				<img src="assets/images/selected_seats.png">
+				<div class="checkbox">
+					<label><input type="checkbox"  name="capabilities[]" value="" >
+							(A-1)
+					 </label>
+				 </div>
+			</div><!-- col-sm-12 -->
+
+			<div class="col-sm-1 seats nopadding">
+				<img src="assets/images/selected_seats.png">
+				<div class="checkbox">
+					<label><input type="checkbox"  name="capabilities[]" value="" >
+							(A-1)
+					 </label>
+				 </div>
+			</div><!-- col-sm-12 -->
+
+			<div class="col-sm-1 seats nopadding">
+				<img src="assets/images/selected_seats.png">
+				<div class="checkbox">
+					<label><input type="checkbox"  name="capabilities[]" value="" >
+							(A-1)
+					 </label>
+				 </div>
+			</div><!-- col-sm-12 -->
+
+			<div class="col-sm-1 seats nopadding">
+				<img src="assets/images/selected_seats.png">
+				<div class="checkbox">
+					<label><input type="checkbox"  name="capabilities[]" value="" >
+							(A-1)
+					 </label>
+				 </div>
+			</div><!-- col-sm-12 -->
+
+			<div class="col-sm-1 seats nopadding">
+				<img src="assets/images/selected_seats.png">
+				<div class="checkbox">
+					<label><input type="checkbox"  name="capabilities[]" value="" >
+							(A-1)
+					 </label>
+				 </div>
+			</div><!-- col-sm-12 -->
+
+			<div class="col-sm-1 seats nopadding">
+				<img src="assets/images/selected_seats.png">
+				<div class="checkbox">
+					<label><input type="checkbox"  name="capabilities[]" value="" >
+							(A-1)
+					 </label>
+				 </div>
+			</div><!-- col-sm-12 -->
+
+			<div class="col-sm-1 seats nopadding">
+				<img src="assets/images/selected_seats.png">
+				<div class="checkbox">
+					<label><input type="checkbox"  name="capabilities[]" value="" >
+							(A-1)
+					 </label>
+				 </div>
+			</div><!-- col-sm-12 -->
+
+			<div class="col-sm-1 seats nopadding">
+				<img src="assets/images/selected_seats.png">
+				<div class="checkbox">
+					<label><input type="checkbox"  name="capabilities[]" value="" >
+							(A-1)
+					 </label>
+				 </div>
+			</div><!-- col-sm-12 -->
+
+			<div class="col-sm-1 seats nopadding">
+				<img src="assets/images/selected_seats.png">
+				<div class="checkbox">
+					<label><input type="checkbox"  name="capabilities[]" value="" >
+							(A-1)
+					 </label>
+				 </div>
+			</div><!-- col-sm-12 -->
+
+			<div class="col-sm-1 seats nopadding">
+				<img src="assets/images/selected_seats.png">
+				<div class="checkbox">
+					<label><input type="checkbox"  name="capabilities[]" value="" >
+							(A-1)
+					 </label>
+				 </div>
+			</div><!-- col-sm-12 -->
+	</div><!-- row-11 -->
+
+	<div class="row-10">
+		<div class="col-sm-1 seats nopadding">
+				<img src="assets/images/selecting_seats.png">
+				<div class="checkbox">
+					<label><input type="checkbox"  name="capabilities[]" value="" >
+							(A-1)
+					 </label>
+				 </div>
+			</div><!-- col-sm-12 -->	
+
+			<div class="col-sm-1 seats nopadding">
+				<img src="assets/images/selecting_seats.png">
+				<div class="checkbox">
+					<label><input type="checkbox"  name="capabilities[]" value="" >
+							(A-1)
+					 </label>
+				 </div>
+			</div><!-- col-sm-12 -->
+
+			<div class="col-sm-1 seats nopadding">
+				<img src="assets/images/selecting_seats.png">
+				<div class="checkbox">
+					<label><input type="checkbox"  name="capabilities[]" value="" >
+							(A-1)
+					 </label>
+				 </div>
+			</div><!-- col-sm-12 -->
+
+			<div class="col-sm-1 seats nopadding">
+				<img src="assets/images/selecting_seats.png">
+				<div class="checkbox">
+					<label><input type="checkbox"  name="capabilities[]" value="" >
+							(A-1)
+					 </label>
+				 </div>
+			</div><!-- col-sm-12 -->
+
+			<div class="col-sm-1 seats nopadding">
+				<img src="assets/images/selecting_seats.png">
+				<div class="checkbox">
+					<label><input type="checkbox"  name="capabilities[]" value="" >
+							(A-1)
+					 </label>
+				 </div>
+			</div><!-- col-sm-12 -->
+
+			<div class="col-sm-1 seats nopadding">
+				<img src="assets/images/selecting_seats.png">
+				<div class="checkbox">
+					<label><input type="checkbox"  name="capabilities[]" value="" >
+							(A-1)
+					 </label>
+				 </div>
+			</div><!-- col-sm-12 -->
+
+			<div class="col-sm-1 seats nopadding">
+				<img src="assets/images/selecting_seats.png">
+				<div class="checkbox">
+					<label><input type="checkbox"  name="capabilities[]" value="" >
+							(A-1)
+					 </label>
+				 </div>
+			</div><!-- col-sm-12 -->
+
+			<div class="col-sm-1 seats nopadding">
+				<img src="assets/images/selecting_seats.png">
+				<div class="checkbox">
+					<label><input type="checkbox"  name="capabilities[]" value="" >
+							(A-1)
+					 </label>
+				 </div>
+			</div><!-- col-sm-12 -->	
+
+			<div class="col-sm-1 seats nopadding">
+				<img src="assets/images/selecting_seats.png">
+				<div class="checkbox">
+					<label><input type="checkbox"  name="capabilities[]" value="" >
+							(A-1)
+					 </label>
+				 </div>
+			</div><!-- col-sm-12 -->	
+
+			<div class="col-sm-1 seats nopadding">
+				<img src="assets/images/selecting_seats.png">
+				<div class="checkbox">
+					<label><input type="checkbox"  name="capabilities[]" value="" >
+							(A-1)
+					 </label>
+				 </div>
+			</div><!-- col-sm-12 -->	
+		</div><!-- row-10 -->
+
+
+<div class="row-11">
+
+	<div class="col-sm-1 seats nopadding">
+				<img src="assets/images/selecting_seats.png">
+				<div class="checkbox">
+					<label><input type="checkbox"  name="capabilities[]" value="" >
+							(A-1)
+					 </label>
+				 </div>
+			</div><!-- col-sm-12 -->
+
+	<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selected_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+	</div><!-- col-sm-12 -->
+
+	<div class="col-sm-1 seats nopadding">
+				<img src="assets/images/selecting_seats.png">
+				<div class="checkbox">
+					<label><input type="checkbox"  name="capabilities[]" value="" >
+							(A-1)
+					 </label>
+				 </div>
+			</div><!-- col-sm-12 -->
+
+	<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selected_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+	</div><!-- col-sm-12 -->
+
+	<div class="col-sm-1 seats nopadding">
+				<img src="assets/images/selecting_seats.png">
+				<div class="checkbox">
+					<label><input type="checkbox"  name="capabilities[]" value="" >
+							(A-1)
+					 </label>
+				 </div>
+			</div><!-- col-sm-12 -->
+
+	<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selected_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+	</div><!-- col-sm-12 -->
+
+	<div class="col-sm-1 seats nopadding">
+				<img src="assets/images/selecting_seats.png">
+				<div class="checkbox">
+					<label><input type="checkbox"  name="capabilities[]" value="" >
+							(A-1)
+					 </label>
+				 </div>
+			</div><!-- col-sm-12 -->
+
+	<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selected_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+	</div><!-- col-sm-12 -->
+
+	<div class="col-sm-1 seats nopadding">
+				<img src="assets/images/selecting_seats.png">
+				<div class="checkbox">
+					<label><input type="checkbox"  name="capabilities[]" value="" >
+							(A-1)
+					 </label>
+				 </div>
+			</div><!-- col-sm-12 -->
+
+	<div class="col-sm-1 seats nopadding">
+			<img src="assets/images/selected_seats.png">
+			<div class="checkbox">
+				<label><input type="checkbox"  name="capabilities[]" value="" >
+						(A-1)
+				 </label>
+			 </div>
+	</div><!-- col-sm-12 -->
+
+<div class="col-sm-1 seats nopadding">
+				<img src="assets/images/selecting_seats.png">
+				<div class="checkbox">
+					<label><input type="checkbox"  name="capabilities[]" value="" >
+							(A-1)
+					 </label>
+				 </div>
+			</div><!-- col-sm-12 -->
+</div><!-- row-11 -->
+
+
+	<div class="col-sm-1 seats nopadding">
+		<img src="assets/images/selecting_seats.png">
+		<div class="checkbox">
+			<label><input type="checkbox"  name="capabilities[]" value="" >
+					(A-1)
+			 </label>
+		 </div>
+	</div><!-- col-sm-12 -->
+
+	<div class="col-sm-1 seats nopadding">
+		<img src="assets/images/selecting_seats.png">
+		<div class="checkbox">
+			<label><input type="checkbox"  name="capabilities[]" value="" >
+					(A-1)
+			 </label>
+		 </div>
+	</div><!-- col-sm-12 -->
+
+	<div class="col-sm-1 seats nopadding">
+		<img src="assets/images/selecting_seats.png">
+		<div class="checkbox">
+			<label><input type="checkbox"  name="capabilities[]" value="" >
+					(A-1)
+			 </label>
+		 </div>
+	</div><!-- col-sm-12 -->
+
+	<div class="col-sm-1 seats nopadding">
+		<img src="assets/images/selecting_seats.png">
+		<div class="checkbox">
+			<label><input type="checkbox"  name="capabilities[]" value="" >
+					(A-1)
+			 </label>
+		 </div>
+	</div><!-- col-sm-12 -->
+
+	<div class="col-sm-1 col-sm-offset-3 seats nopadding">
+		<img src="assets/images/selecting_seats.png">
+		<div class="checkbox">
+			<label><input type="checkbox"  name="capabilities[]" value="" >
+					(A-1)
+			 </label>
+		 </div>
+	</div><!-- col-sm-12 -->
+
+	<div class="col-sm-1 seats nopadding">
+		<img src="assets/images/selecting_seats.png">
+		<div class="checkbox">
+			<label><input type="checkbox"  name="capabilities[]" value="" >
+					(A-1)
+			 </label>
+		 </div>
+	</div><!-- col-sm-12 -->
+
+	<div class="col-sm-1 seats nopadding">
+		<img src="assets/images/selecting_seats.png">
+		<div class="checkbox">
+			<label><input type="checkbox"  name="capabilities[]" value="" >
+					(A-1)
+			 </label>
+		 </div>
+	</div><!-- col-sm-12 -->
+
+	<div class="col-sm-1 seats nopadding">
+		<img src="assets/images/selecting_seats.png">
+		<div class="checkbox">
+			<label><input type="checkbox"  name="capabilities[]" value="" >
+					(A-1)
+			 </label>
+		 </div>
+	</div><!-- col-sm-12 -->
+
+	<div class="col-sm-1 seats nopadding">
+		<img src="assets/images/selecting_seats.png">
+		<div class="checkbox">
+			<label><input type="checkbox"  name="capabilities[]" value="" >
+					(A-1)
+			 </label>
+		 </div>
+	</div><!-- col-sm-12 -->
+		
+</div><!-- container -->
+  
+   
+   
+    <!-- Bootstrap core JavaScript -->
+    <script src="assets/js/jquery.latest.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+	<script>
+	$( document ).ready(function() {
+
+		$(".seats input[type='checkbox']").click(function(){	
+			imagePath = $(this).parent().parent().parent().find('img').attr("src");
+			//alert(imagePath);
+		if(imagePath == "assets/images/selecting_seats.png"){
+			$(this).parent().parent().parent().find('img').attr("src", "assets/images/empty_seats.png");
+		}else if(imagePath == "assets/images/empty_seats.png"){
+			$(this).parent().parent().parent().find('img').attr("src", "assets/images/selecting_seats.png");
+		}
+			//$(this).attr("src", "assets/images/selected_checkbox.png");
+			/*if(imagePath == "assets/images/checkbox.png"){
+				health_confirm = '';	
+				//$(".health_icon").removeClass('health-plan-yes');
+			}
+				else if(imagePath == "assets/images/selected_checkbox.png"){
+				
+				health_confirm = 'yes';
+				//$(".health_icon").addClass('health-plan-yes');
+			}*/
+
+		});
+		
+	});
+	</script>
+	
+  </body>
+</html>
